@@ -1,0 +1,4 @@
+export const FETCH_REQUEST = 'FETCH_REQUEST'
+export const FETCH_SUCCEED = 'FETCH_SUCCEED'
+export const FETCH_FAILED = 'FETCH_FAILED'
+export const CLEAR_ERROR = 'CLEAR_ERROR'
