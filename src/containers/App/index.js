@@ -56,7 +56,7 @@ class App extends Component {
       },
 
       weatherForecast: {
-        focusEnd: Math.floor((list.reduce((r, v, i, a, k = v.day) => ((r[k] || (r[k] = [])).push(v), r), {})[list[0].day].length) / (list.length) * 100) - 1,
+        focusEnd: Math.floor((list.reduce((r, v, i, a, k = v.day) => { (r[k] || (r[k] = [])).push(v); return r }, {})[list[0].day].length) / (list.length) * 100) - 1,
         breakpoints: list.map(period => `${period.time}\n${period.day}`),
         series: list.reduce((acc, cur, i, arr) => {
           if (i === 0) {
